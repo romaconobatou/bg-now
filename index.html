@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BG NOW</title>
+<meta name="description" content="BG NOW — 個人用ダッシュボード。Google カレンダーと Google ToDo を読み取り専用で表示します。">
+<style>
+  :root { --bg: #0b0d12; --card: #141821; --line: #262c3a; --fg: #e8ecf3; --muted: #8b94a7; --accent: #88dfcf; color-scheme: dark; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f3f5f9; --card: #ffffff; --line: #d9dee8; --fg: #151a24; --muted: #5b6477; --accent: #0b7466; color-scheme: light; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); line-height: 1.75;
+    font-family: -apple-system, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { margin: 0 0 4px; font-size: 32px; letter-spacing: .04em; }
+  .lead { margin: 0 0 32px; color: var(--muted); }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; margin-bottom: 20px; }
+  h2 { margin: 0 0 8px; font-size: 20px; }
+  h3 { margin: 20px 0 4px; font-size: 16px; color: var(--accent); }
+  ul { margin: 4px 0; padding-left: 1.3em; }
+  p { margin: 6px 0; }
+  .en { color: var(--muted); font-size: 14px; }
+  footer { color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <h1>BG NOW</h1>
+  <p class="lead">個人用のダッシュボード / A personal dashboard</p>
+
+  <section id="about">
+    <h2>このアプリについて</h2>
+    <p>BG NOW は、作成者本人だけが自宅で使う個人用のダッシュボードです。
+      自宅の PC で動き、同じ Wi‑Fi の自分の端末に、今日の予定・タスクと、AI ツールの使用量を表示します。</p>
+    <p>Google カレンダーと Google ToDo リストの内容を<strong>読み取り専用</strong>で取得し、
+      「次の予定」「今日の予定」「今日のタスク」として表示します。</p>
+    <p class="en">BG NOW is a personal dashboard used only by its author at home. It reads (read-only) Google Calendar
+      and Google Tasks to show today's schedule and tasks on the author's own devices.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>プライバシーポリシー</h2>
+    <p>最終更新日: 2026年10月27日</p>
+
+    <h3>取得する情報</h3>
+    <ul>
+      <li>Google カレンダーの予定（題名・日時・場所・カレンダーの名前と色）</li>
+      <li>Google ToDo リストの未完了のタスク（題名・期限）</li>
+    </ul>
+    <p>使用する権限は次の 2 つだけで、いずれも読み取り専用です。予定やタスクを作成・変更・削除することはありません。</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/calendar.readonly</code></li>
+      <li><code>https://www.googleapis.com/auth/tasks.readonly</code></li>
+    </ul>
+
+    <h3>情報の使い方</h3>
+    <ul>
+      <li>取得した情報は、作成者本人の端末に今日の予定とタスクを表示するためだけに使います。</li>
+      <li>広告、分析、機械学習の学習などには使いません。</li>
+    </ul>
+
+    <h3>保存と共有</h3>
+    <ul>
+      <li>情報とログインのトークンは、作成者の自宅の PC の中だけに保存します。</li>
+      <li>第三者への提供・販売・公開はしません。外部のサーバーやクラウドにも送信しません。</li>
+    </ul>
+
+    <h3>アクセスの取り消し</h3>
+    <p>Google アカウントの <a href="https://myaccount.google.com/permissions">サードパーティ アクセス</a> から、
+      いつでも BG NOW のアクセス権を削除できます。削除すると、BG NOW は情報を取得できなくなります。</p>
+
+    <h3>Google API サービスのユーザーデータに関するポリシー</h3>
+    <p>BG NOW による Google API から受け取った情報の使用は、
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>
+      （Limited Use の要件を含む）に従います。</p>
+
+    <p class="en">BG NOW only uses read-only access to Google Calendar and Google Tasks to display the author's own schedule
+      and tasks. Data stays on the author's home PC and is never shared, sold, or sent to third parties. BG NOW's use of
+      information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.</p>
+  </section>
+
+  <footer>BG NOW</footer>
+</main>
+</body>
+</html>
